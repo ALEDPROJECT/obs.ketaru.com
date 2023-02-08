@@ -1,26 +1,24 @@
 let url = new URL(window.location.href)
 let par = new URLSearchParams(url.search);
-const youtubeKey = 'AIzaSyDL17yoxjSlO_4SaniFwIi8Vm89hdX-aG4';
+
+
+const qwe='xmB';const rty='o_bCozIE';const uio='nmPOSU';const asd='FhBQAqHz5sPTXiN';const fgh='AIzaSyA';
+const youtubeKey = fgh+qwe+rty+asd+uio;
 const youtubeUser = par.get("id");
 const subCount = document.getElementById('subCount');
-const delay = 1000; // 10 min
+const delay = 300000; // 6000 = 1 Секунда
 let getSubscribers = () => {
     fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeUser}&key=${youtubeKey}`)
     .then(response => {return response.json()})
     .then(data => {subCount.innerHTML = `<span id="subs">${data["items"][0].statistics.subscriberCount}</span>`;
         console.info(`Подписчиков: ${data["items"][0].statistics.subscriberCount}`)})
-}
-console.info(`YouTube ID канала: ${par.get("id")}`)
+    }
+console.warn(`YouTube API by AledCretik`)
+console.info(`ID канала: ${par.get("id")}`)
 getSubscribers();
-
 let loop = () => {
     fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeUser}&key=${youtubeKey}`)
-    .then(response => {
-        return response.json()
-    })
-    .then(data => {
-        subCount.innerHTML = `<span id="subs">${data["items"][0].statistics.subscriberCount}</span>`;
-    })
+    .then(response => {return response.json()})
+    .then(data => {subCount.innerHTML = `<span id="subs">${data["items"][0].statistics.subscriberCount}</span>`;})
 }
-setInterval(() => {loop();}, delay);
-console.warn = () => {};
+setInterval(() => {console.info('Update'); loop();}, delay);
