@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+#subPanel{
+    font-family: 'Quicksand', "Comfortaa";
+    position: relative;
+    font-size: 20px;
+    font-weight: 900;
+    left: 10px;
+    top: 25px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+#subCount{
+    background-color: rgb(61, 72, 170);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+#InfoUrl{
+    color: rgb(252, 255, 49);
+    background-color: rgba(1, 0, 85, 0.63);
+    font-size:17px;
+    margin-left: 10px;
+    padding: 3px 20px;
+    border-radius: 5px;
+}
+#InfoUrl:after{
+    content: 'ID_канала';
+    color: rgb(133, 247, 255);
+}
+#subs:before{
+    content: 'Подписчиков: ';
+    font-style: italic;
+    color: rgb(85, 255, 255);
+}
+body{
+    background: #222;
+}
+:root{
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    -o-user-select: none;
+}
