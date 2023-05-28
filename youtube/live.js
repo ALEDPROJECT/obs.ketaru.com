@@ -13,7 +13,7 @@ let getSubscribers = () => {
     .then(data => {subCount.innerHTML = `<span id="subs">${data["items"][0].statistics.subscriberCount}</span>`;
         console.info(`Подписчиков: ${data["items"][0].statistics.subscriberCount}`)})
     }
-console.warn(`YouTube API by AledCretik`)
+console.warn(`YouTube API by KetaruDev`)
 console.info(`ID канала: ${par.get("id")}`)
 getSubscribers();
 let loop = () => {
