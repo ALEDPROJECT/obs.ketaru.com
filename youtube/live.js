@@ -13,7 +13,7 @@ let getSubscribers = () => {
     .then(data => {subCount.innerHTML = `<span id="subs">${data["items"][0].statistics.subscriberCount}</span>`;
         console.info(`Подписчиков: ${data["items"][0].statistics.subscriberCount}`)})
     }
-console.warn(`YouTube API by KetaruDev`)
+console.warn(`YouTube API by KetaruCorp`)
 console.info(`ID канала: ${par.get("id")}`)
 getSubscribers();
 let loop = () => {
@@ -21,4 +21,4 @@ let loop = () => {
     .then(response => {return response.json()})
     .then(data => {subCount.innerHTML = `<span id="subs">${data["items"][0].statistics.subscriberCount}</span>`;})
 }
-setInterval(() => {console.info('Update'); loop();}, delay);
+setInterval(() => {console.info(`Update ${data["items"][0].statistics.subscriberCount}`); loop();}, delay);
